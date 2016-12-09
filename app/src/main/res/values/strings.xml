@@ -1,3 +1,7 @@
 <resources>
-    <string name="app_name">HelpNeedy</string>
+    <string name="app_name">Help Needy</string>
+    <string name="splash_title">Help Needy</string>
+    <string name="content_desc">Loading</string>
+    <string name="Not_a_member">Not a member?</string>
+    <string name="Sign_up_now">Sign up now.</string>
 </resources>
