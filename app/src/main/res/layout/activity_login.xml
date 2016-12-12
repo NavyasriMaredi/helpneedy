@@ -11,6 +11,7 @@
     android:background="@color/LoginScreen"
     tools:context="com.example.navyaspc.helpneedy.LoginActivity">
 
+
     <EditText
         android:id="@+id/Emailedittest"
         android:layout_width="match_parent"
@@ -21,8 +22,8 @@
         android:fontFamily="sans-serif"
         android:background="@color/White"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="120dp"
-        android:textSize="20sp"
+        android:layout_marginTop="70dp"
+        android:textSize="15sp"
         android:paddingLeft="10dp"
         />
 
@@ -38,7 +39,7 @@
         android:background="@color/White"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp"
-        android:textSize="20sp"
+        android:textSize="15sp"
         android:paddingLeft="10dp"
         android:layout_below="@id/Emailedittest"
         />
@@ -55,38 +56,102 @@
       android:textSize="15sp"
       android:textColor="@color/themeColor"
       android:layout_below="@id/Passwordedittest"
-      android:layout_marginTop="30dp"/>
+      android:layout_marginTop="30dp"
+      android:onClick="LoginButton" />
+
+    <TextView
+        android:id="@+id/orEditTest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/Loginbutton"
+        android:layout_marginTop="20dp"
+        android:text="@string/or"
+        android:textSize="15dp"
+        android:textColor="@color/White"
+        android:fontFamily="sans-serif"/>
+
+    <TextView
+        android:id="@+id/leftlineTextView"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="15dp"
+        android:layout_height="1dp"
+        android:layout_toLeftOf="@+id/orEditTest"
+        android:layout_below="@+id/Loginbutton"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="9dp"
+        android:background="@color/White"/>
+
+    <TextView
+        android:id="@+id/rightlineTextView"
+        android:layout_width="match_parent"
+        android:layout_marginRight="15dp"
+        android:layout_height="1dp"
+        android:layout_toRightOf="@+id/orEditTest"
+        android:layout_below="@id/Loginbutton"
+        android:layout_marginTop="30dp"
+        android:background="@color/White"
+        android:layout_marginLeft="9dp"/>
 
     <LinearLayout
-        android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
+        android:id="@+id/linearlayout1"
+        android:layout_height="40dp"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="19dp"
+        android:layout_marginRight="19dp"
         android:layout_centerHorizontal="true"
         android:orientation="horizontal"
-        android:layout_below="@id/Loginbutton"
-        android:layout_marginTop="30dp">
+        android:layout_below="@+id/orEditTest"
+        android:layout_marginTop="20dp">
 
-        <TextView
-            android:id="@+id/textview"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/Not_a_member"
-            android:textSize="15dp"
-            android:fontFamily="sans-serif"
-            android:textColor="@color/White"
-            />
+        <ImageButton
+            android:id="@+id/fbImageButton"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_marginRight="5dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/facebook" />
 
-        <Button
-            android:id="@+id/Signupbutton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/Sign_up_now"
-            android:textColor="@color/White"
-            android:textAllCaps="false"
-            android:fontFamily="sans-serif"
-            android:background="@color/trasparent"/>
-
+        <ImageButton
+            android:id="@+id/gglImageButton"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_marginLeft="5dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/google" />
 
     </LinearLayout>
+
+    <Button
+        android:id="@+id/Signupbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="-3dp"
+        android:text="@string/Sign_up_now"
+        android:textSize="15sp"
+        android:textColor="@color/White"
+        android:textAllCaps="false"
+        android:fontFamily="sans-serif"
+        android:background="@color/trasparent"
+        android:onClick="signupButton" />
+
+
+    <Button
+        android:id="@+id/forgotButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="10dp"
+        android:text="Forgot Password?"
+        android:textSize="15dp"
+        android:textAllCaps="false"
+        android:fontFamily="sans-serif"
+        android:textColor="@color/White"
+        android:background="@color/trasparent"/>
 
 
 </RelativeLayout>

@@ -3,5 +3,6 @@
     <string name="splash_title">Help Needy</string>
     <string name="content_desc">Loading</string>
     <string name="Not_a_member">Not a member?</string>
-    <string name="Sign_up_now">Sign up now.</string>
+    <string name="Sign_up_now">Sign up here</string>
+    <string name="or">or</string>
 </resources>
