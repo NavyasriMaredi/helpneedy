@@ -1,11 +1,15 @@
 package com.example.navyaspc.helpneedy;
 
+import android.content.Context;
 import android.content.DialogInterface;
+import android.graphics.Rect;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.view.MotionEvent;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 
 public class SignupActivity extends AppCompatActivity {
@@ -27,6 +31,9 @@ public class SignupActivity extends AppCompatActivity {
         email = (EditText) findViewById(R.id.emailEditTest);
         password = (EditText) findViewById(R.id.passworEditTest);
         confpassword = (EditText) findViewById(R.id.confirmEditTest);
+
+        String passwordString = password.getText().toString();
+        String confpassString = confpassword.getText().toString();
 
         String emailstring = email.getText().toString();
 
@@ -75,7 +82,7 @@ public class SignupActivity extends AppCompatActivity {
             pass.show();
         }
 
-        else if(password != confpassword){
+        else if(passwordString != confpassString){
             AlertDialog.Builder confab = new AlertDialog.Builder(this);
             confab.setTitle("Warning!")
                     .setMessage("Password and confirm password are not matching")
@@ -94,4 +101,5 @@ public class SignupActivity extends AppCompatActivity {
     public final static boolean isValidEmail(CharSequence email){
         return !TextUtils.isEmpty(email) && android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches();
     }
+  
 }
