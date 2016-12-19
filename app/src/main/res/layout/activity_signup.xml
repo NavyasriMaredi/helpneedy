@@ -112,7 +112,8 @@
             android:text="Sign up"
             android:textSize="15dp"
             android:textAllCaps="false"
-            android:textColor="@color/themeColor"/>
+            android:textColor="@color/themeColor"
+            android:onClick="signupbutton" />
 
 </RelativeLayout>
 
